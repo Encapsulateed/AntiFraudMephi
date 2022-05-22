@@ -1,0 +1,49 @@
+{% extends 'user/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <form id="reg_form" method="post" >
+        {% csrf_token %}
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <h1 id="reg_h1">Личный кабинет</h1>
+        <div class="group">
+            <label for="" class="reg_labels">Login: {{login}}</label>
+         
+        </div>
+    
+        <div class="group">
+            <label for="" class="reg_labels">Password: {{pass}}</label>
+        </div>
+
+        <div class="group">
+            <label for="" class="reg_labels">Money: {{money}} ₽</label>
+        </div>
+
+        <div class="group">
+            <center>
+                <input type="submit" id="reg_button" value="Пополнить счёт" name="redirect" formmethod="post">
+            </center>
+    
+        </div>
+
+        <div class="group">
+            <center>
+                <input type="submit" id="reg_button" value="Перевод" name="redirect" formmethod="post">
+                
+            </center>
+    
+        </div>
+       
+    </form>
+
+    
+
+
+{% endblock %}

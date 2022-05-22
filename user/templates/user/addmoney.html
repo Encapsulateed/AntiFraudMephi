@@ -1,0 +1,42 @@
+{% extends 'user/base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+
+<form id="reg_form" method="post" >
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% csrf_token %}
+    <h1 id="reg_h1">Пополение счёта</h1>
+    <div class="group">
+        <label for="" class="reg_labels">Сумма</label>
+        <input type="text" class="reg_inputs" name="money">
+    </div>
+
+    <script src="{% static 'user\js\getfp.js' %}"></script>
+
+    <div class="group">
+        <center>
+            <input type="submit" id="reg_button" value="Пополнить" name="redirect" formmethod="post">
+        </center>
+
+    </div>
+
+
+
+</form>
+
+
+
+{% endblock %}

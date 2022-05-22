@@ -1,0 +1,47 @@
+{% extends 'user/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<header>
+    <div class="container" align="center">
+        <h2 style="font-family: monospace; font-size: 40px;">О проекте</h2>
+        
+    </div>
+</header>
+<section>
+   
+    <div class="container" align="center">
+        <div id="mephi_div" align="left">
+            <div>
+                <h5 class="about_text">Мы - студенты 1 курса НИЯУ МИФИ, подготовили данный сайт в качестве своей
+                    проектной практики.</h5>
+                <h5 class="about_text">Суть проекта - в сборе и последующей обработке цифровых отпечатков пользователей.
+                </h5>
+                <h5 class="about_text">Для их последущей обработки и идентификации пользователей.</h5>
+                <h5 class="about_text">На сайте всего две основные кнопки: Регистрация и Авторизация.</h5>
+                <h5 class="about_text">При регистрации мы запомниаем ваш уникальный отпечаток При авторизации сверяем
+                    его.</h5>
+
+            </div>
+            <div class="autors">
+                <h5>From: Mephi with love ^_^
+                </h5>
+                <h5>By: Митрошкин Алексей
+
+                </h5>
+                <h5> Кудрявцев Илья
+                </h5>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+<img src="{% static 'user\images\iiks.png' %}" class="mephi" id="iiks_logo">
+
+
+
+{% endblock %}

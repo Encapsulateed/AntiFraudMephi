@@ -1,0 +1,352 @@
+*, *:after, *:before
+{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	transition: .5s ease-in-out;
+
+
+}
+
+
+:root {
+ --base-scale:calc(100vw / 75);
+ --h2-font-size:max(1em, min(4em, calc(var(--base-scale) * 4)));
+ --padding-size:max(1em, min(2em, calc(var(--base-scale) * 2)));
+ --margin-size:max(0.5em, min(2em, calc(var(--base-scale) * 2)));
+ --border-radius:max(1em, min(3em, calc(var(--base-scale) * 3)));
+}
+
+ul
+{
+	list-style: none;
+}
+
+
+a
+{
+	text-decoration: none;
+	outline: none;
+}
+
+
+
+
+img
+{
+	display: block;
+	width: 100%;
+}
+
+
+h1, h2, h3, h4, h5, h6
+{
+   font-family: 'hauss';
+   font-weight: normal;
+   letter-spacing: 1px;
+}
+
+
+section header
+{
+	width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    overflow: auto;  
+}
+
+body
+{
+	font-family: monospace;
+	font-size: 1,875em;
+	line-height: 1;
+	width: 100%;
+	height: 100%;
+  
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+header:after, .container:after, footer:after, .widget-posts-list li:after, #subscribe:after
+{
+   content: "";
+   display: table;
+   clear: both;
+}
+
+
+header
+{
+	padding: var(--padding-size);
+	margin-bottom: var(--margin-size);
+}
+
+
+.container {
+  position: relative;
+	color: rgb(0, 0, 0);
+	flex: 1 0 auto;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1024px;
+	height: auto;
+}
+
+
+
+nav
+{
+	background: rgba(0, 0, 0, .3);
+	opacity: 87%;
+	width: 100%;
+	padding-top: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	border-radius: var(--border-radius);
+}
+
+nav li
+{
+	padding-bottom: 5%;
+	display: block;
+
+}
+
+nav ul
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+
+nav a
+{
+	color: #eee;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+	display: block;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+	background-size: 200% auto;
+	border-radius: var(--border-radius);
+	text-transform: uppercase;
+}
+
+nav li:last-child {
+   margin-right: 0;
+
+}
+
+
+nav a:hover
+{
+	opacity: 80%;
+	font-weight: bold;
+	transform: scale(1.01);
+}
+
+footer
+{
+	flex:  0 0 auto;
+}
+
+label
+{
+	flex:  0 0 auto;
+	display: block;
+	text-transform: uppercase;
+	padding-top: var(--padding-size);
+}
+
+
+	.about_text:first-child
+	{
+		margin-top: 0;
+	}
+	.about_text
+	{		
+		font-family:monospace;
+		font-size: 30px;
+		position: relative;
+	}
+
+	.autors{
+		margin-top: var(--margin-size);
+		font-family:monospace;
+		position: relative;
+    font-size: 24px;
+	}
+
+
+  #mephi_div{
+
+		flex:  0 0 auto;
+		position: absolute;
+	}		
+
+
+#contact{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+#tg {
+  width: 40px;
+  height: 40px;
+}
+
+
+  #mephi_logo{
+    position: absolute;
+    left: -400px;
+    top: -50px;
+    width: 35%;
+    height: auto;
+  }
+  #iiks_logo{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 10%;
+    height: auto;
+  }
+  .reg_form{
+    
+    font-family: monospace;
+    margin: 0 auto;
+    background-color: rgba(197, 92, 183, 0.24);
+    border-radius: 10px;
+    padding-left: 20px;
+    width: 450px;
+    height: 500px;
+    box-shadow: black 2px 2px 2px;
+  
+  }
+  #reg_h1{
+    cursor: help;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 3px solid;
+  }
+  .group{
+    margin: 10px;
+    padding: 5px;
+  }
+  .reg_labels{
+    padding-left: 10px;
+    text-transform: uppercase;
+  
+  }
+  .reg_inputs{
+    margin-left: 10px;
+    height: 30px;
+    width: 360px;
+    border-radius: 15px/15px;
+    border: none;
+    padding-left: 15px;
+    font-size: 18px; 
+    box-shadow: black 2px 2px 2px;
+  }
+  .reg_inputs:focus{
+    border: 2px solid #9EEFE1;
+    transform: translateX(15px);
+    width: 385px;
+  }
+  #reg_button{
+    background-color: white;
+    cursor: pointer;
+    padding: 10px 30px;
+    height: 55px;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 20px;
+    box-shadow: black 3px 3px 3px;
+  }
+  #reg_button:hover{
+    opacity: 80%;
+    font-weight: bold;
+    transform: scale(1.01);
+    border: 2px solid #9EEFE1;
+  }
+  
+  #aut_form{
+    
+    font-family: monospace;
+    margin: 0 auto;
+    background-color: rgba(197, 92, 183, 0.24);
+    border-radius: 10px;
+    padding-left: 20px;
+    width: 450px;
+    height: 400px;
+    box-shadow: black 2px 2px 2px;
+  
+  }
+  #account_form{
+    
+    font-family: monospace;
+    margin: 0 auto;
+    background-color: rgba(197, 92, 183, 0.24);
+    border-radius: 10px;
+    padding-left: 20px;
+    width: 450px;
+    height: 400px;
+    box-shadow: black 2px 2px 2px;
+  
+  }
+  #aut_h1{
+    cursor: help;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 3px solid;
+  }
+  
+  .aut_labels{
+    padding-left: 10px;
+    text-transform: uppercase;
+  
+  }
+  .aut_inputs{
+    margin-left: 10px;
+    height: 30px;
+    width: 360px;
+    border-radius: 15px/15px;
+    border: none;
+    padding-left: 15px;
+    font-size: 18px; 
+    box-shadow: black 2px 2px 2px;
+  }
+  .aut_inputs:focus{
+    border: 2px solid #9EEFE1;
+    transform: translateX(15px);
+    width: 385px;
+  }
+  #aut_button{
+    cursor: pointer;
+    padding: 10px 30px;
+    height: 55px;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 20px;
+    box-shadow: black 2px 2px 2px;
+  }
+  #aut_button:hover{
+    opacity: 80%;
+    font-weight: bold;
+    transform: scale(1.01);
+    border: 2px solid #9EEFE1;
+  }
+
+
+  
+

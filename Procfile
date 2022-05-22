@@ -1,0 +1,1 @@
+web gunicorn antifraud.wsgi:application --log-file -

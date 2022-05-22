@@ -1,0 +1,47 @@
+{% extends 'user/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<form id="reg_form" method="post" action="{% url 'registration'%}">
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% csrf_token %}
+    <h1 id="reg_h1">Регистрация</h1>
+    <div class="group">
+        <label for="" class="reg_labels">Login</label>
+        <input type="text" class="reg_inputs" name="login">
+    </div>
+
+    <div class="group">
+        <label for="" class="reg_labels">Password</label>
+        <input type="password" class="reg_inputs" name="pass">
+    </div>
+
+    <div class="group">
+        <label for="" class="reg_labels" >Repeat Password</label>
+        <input type="password" class="reg_inputs" name="pass_r">
+    </div>
+
+    <div class="group">
+        <center>
+            <input type="submit" id="reg_button" value="Регистрация" name="redirect" formmethod="post">
+        </center>
+
+    </div>
+
+
+    
+</form>
+
+    
+{% endblock %}

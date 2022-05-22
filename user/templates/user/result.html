@@ -1,0 +1,18 @@
+{% extends 'user/base.html' %}
+{% load static %}
+
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+  
+    <h4 style="color: black; text-align:center;font-family: monospace;  font-size: 30px;">
+         <script src="{% static 'user\js\getfp.js' %}"></script>
+        {{res}}
+
+        <hr color="black">
+    </h4>
+  
+    
+
+
+{% endblock %}
