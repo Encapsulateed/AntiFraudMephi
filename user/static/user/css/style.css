@@ -221,7 +221,7 @@ label
     width: 10%;
     height: auto;
   }
-  .reg_form{
+  #reg_form{
     
     font-family: monospace;
     margin: 0 auto;
@@ -229,7 +229,7 @@ label
     border-radius: 10px;
     padding-left: 20px;
     width: 450px;
-    height: 500px;
+    height: 400px;
     box-shadow: black 2px 2px 2px;
   
   }

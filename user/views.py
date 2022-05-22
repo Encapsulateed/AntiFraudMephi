@@ -56,7 +56,7 @@ def registration(request):
 
                         request.session['login'] = login
                         messages.info(request, 'Вы успешно зарегистрировались, теперь авторизируйтесь')
-                        return  redirect('/autorise/')
+                        return redirect('/autorise/')
                     else:
                         messages.info(request, 'Введённые пароли не совпадают!')
                         return HttpResponseRedirect('/registration')
@@ -125,7 +125,8 @@ def login(request):
     user = User.objects.get(login=user_login)
     request.session['active_user'] = user.id
     return render(request, 'user/account.html',
-                  context={'pass': request.session['pass'], 'login': request.session['login'], 'money': round(user.money,3)})
+                  context={'pass': request.session['pass'], 'login': request.session['login'],
+                           'money': round(user.money, 3), 'id': round(user.id)})
 
 
 def go_to_transactions(request):
@@ -162,7 +163,7 @@ def go_to_transactions(request):
             user_to.money += money_to_sent
 
             transaction = makeTrancation(request, money=money_to_sent, user_from=user_from.id, user_to=user_to.id)
-            value =  isFraude(transaction)
+            value = isFraude(transaction)
 
             user_from.save()
             user_to.save()
