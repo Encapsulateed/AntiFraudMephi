@@ -184,10 +184,8 @@ def go_to_transactions(request):
 
 def add_money(request):
     if 'redirect' in request.POST:
-
         if request.POST['redirect'] == 'Пополнить':
             try:
-                print(request.session['fonts'])
                 user_login = request.session['login']
                 user_pass = request.session['pass']
 
